@@ -7,6 +7,7 @@ const {createPost,creatingComment,replyingComment,gettingComments,expandComments
 const {signupUser,loginUser} = require('../controller/userController');
 
 
+
 // Route-1 for creating  the user
 router.post('/signup',signupUser);
 

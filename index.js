@@ -14,6 +14,12 @@ app.use(cors());
 app.use(express.json());
 
 
+
+// Route-0 for default endpoint
+app.get('/', (req,res)=> {
+    res.send("Hello from the Nodejs server");
+});
+
 // available routes for endpoints
 app.use("/api/", require('./routes/post'));
 
