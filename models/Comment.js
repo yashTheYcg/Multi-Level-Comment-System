@@ -4,7 +4,7 @@ const uuid4 = require('uuid4');
 const commentSchema = new mongoose.Schema({
     commentId:{
         type:String,
-        required:uuid4(),
+        default:uuid4(),
     },
     postId:{
         type:String,
@@ -16,6 +16,7 @@ const commentSchema = new mongoose.Schema({
     },
     parentCommentId:{
         type:String,
+        default:null,
     },
     text:{
         type:String,

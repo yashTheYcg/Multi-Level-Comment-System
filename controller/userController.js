@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const path = require('path');
 const dotenv = require("dotenv");
+const uuid4 = require('uuid4');
 
 
 // path to config.env file
@@ -19,7 +20,7 @@ const signupUser = async (req,res)=> {
                     .status(404)
                     .json({ message: "Please fill the required field" });
             }
-            const user = new User({ email: email.toLowerCase(), password });
+            const user = new User({ email: email.toLowerCase(), password,userId:uuid4() });
             // generate salt to hash password
             const salt = await bcrypt.genSalt(10);
             // now we set user password to hashed password
