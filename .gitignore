@@ -24,4 +24,4 @@ yarn-error.log*
 /app.js
 /server-confiuration.txt
 
-/Dockerfile
+./Dockerfile
